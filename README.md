@@ -1,4 +1,4 @@
-# LogSifter
+# 🐛 LogSifter
 
 A minimalist log viewer for macOS inspired by Apple Console.
 
@@ -17,7 +17,7 @@ This app was almost entirely "vibe coded" with AI assistance. **Use at your own 
 
 ## Origin story
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maybe not impressive anymore but this still blows my mind<br><br>Used to watch debug logs with `tail` or like a degen in the console app. Almost one shotted this debug log viewer:<br><br>- keeps recent logs list<br>- live refresh<br>- search<br>- chunk strategy for large files<br>- way more readable <a href="https://t.co/zstplAW262">pic.twitter.com/zstplAW262</a></p>&mdash; Jeffrey van Rossum (@jeffreyrossum) <a href="https://twitter.com/jeffreyrossum/status/2009479004831584643?ref_src=twsrc%5Etfw">January 9, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+![](tweet.png)
 
 ## Contributing
 
