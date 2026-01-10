@@ -1,6 +1,6 @@
 {
   "name": "logsifter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimalist log viewer inspired by Apple Console",
   "main": "src/main/main.js",
   "scripts": {
@@ -25,7 +25,14 @@
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "src/assets/icons/mac/icon.icns",
-      "target": "dmg"
+      "target": "dmg",
+      "fileAssociations": [
+        {
+          "ext": "log",
+          "name": "Log File",
+          "role": "Viewer"
+        }
+      ]
     },
     "win": {
       "icon": "src/assets/icons/win/icon.ico",

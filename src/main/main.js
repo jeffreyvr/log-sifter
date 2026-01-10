@@ -276,8 +276,27 @@ ipcMain.handle('remove-recent-file', (event, filePath) => removeRecentFile(fileP
 ipcMain.handle('clear-recent-files', clearRecentFiles);
 
 // App lifecycle
+let fileToOpenOnReady = null;
+
+// Handle file open from Finder (macOS)
+app.on('open-file', (event, filePath) => {
+    event.preventDefault();
+    if (mainWindow) {
+        loadFile(filePath);
+    } else {
+        // App not ready yet, store the path to open later
+        fileToOpenOnReady = filePath;
+    }
+});
+
 app.whenReady().then(() => {
     createWindow();
+
+    // Open file that was passed before app was ready
+    if (fileToOpenOnReady) {
+        loadFile(fileToOpenOnReady);
+        fileToOpenOnReady = null;
+    }
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
